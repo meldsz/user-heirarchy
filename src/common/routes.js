@@ -1,5 +1,5 @@
-import { Login } from "../pages/LoginPage";
-import { Heirarchy } from "../pages/HeirarchyPage";
+import { Login } from "../pages/LoginPage/LoginPage";
+import { Heirarchy } from "../pages/HeirarchyPage/HeirarchyPage";
 import { NotFound } from "../components/NotFound/NotFound";
 
 export const routes = [

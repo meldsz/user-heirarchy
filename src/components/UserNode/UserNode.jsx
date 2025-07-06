@@ -10,9 +10,10 @@ export const UserNode = ({ user }) => {
       : "N/A";
 
   return (
-    <div>
+    <div data-testid="user-node-container">
       <div className="user-container">
         <button
+          data-testid="toggle"
           className="toggle"
           onClick={() => setExpanded(!expanded)}
           aria-label={expanded ? "Collapse" : "Expand"}
@@ -21,6 +22,7 @@ export const UserNode = ({ user }) => {
         </button>
         {user?.photo && !isBadImage ? (
           <img
+            data-testid="user-badge"
             className="user-badge"
             src={user?.photo}
             onError={() => setIsBadImage(true)}

@@ -4,7 +4,6 @@ export const fetchUsers = async () => {
   try {
     return await (await fetch(API_URL)).json();
   } catch (err) {
-    console.error("Error fetching Users:", err);
-    return null;
+    throw new Error("Error fetching Users", err);
   }
 };

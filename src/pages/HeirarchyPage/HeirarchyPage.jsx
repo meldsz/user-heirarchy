@@ -1,6 +1,6 @@
-import { useUserContext } from "../contexts/useUserContext";
+import { useUserContext } from "../../contexts/useUserContext";
 import { useNavigate } from "react-router";
-import { UserTree } from "../components/UserTree/UserTree";
+import { UserTree } from "../../components/UserTree/UserTree";
 import { useEffect } from "react";
 
 export const Heirarchy = () => {
@@ -28,7 +28,7 @@ export const Heirarchy = () => {
           <span>{loggedInUser?.firstName}</span>
           <span>{loggedInUser?.lastName}</span>
 
-          <a aria-label="logout" onClick={handleLogout}>
+          <a data-testid="logout" aria-label="logout" onClick={handleLogout}>
             (logout)
           </a>
         </div>

@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { encode } from "../common/utils";
-import { fetchUsers } from "../common/api";
-import { useUserContext } from "../contexts/useUserContext";
+import { encode } from "../../common/utils";
+import { fetchUsers } from "../../common/api";
+import { useUserContext } from "../../contexts/useUserContext";
 import { useNavigate } from "react-router";
 
 export const Login = () => {
@@ -17,13 +17,13 @@ export const Login = () => {
     const encodedSecret = encode(email, password);
     const result = await fetchUsers();
     const userId = result?.secrets[encodedSecret];
-    const user = result?.users.find((user) => user?.id === userId);
 
-    if (user) {
+    if (userId) {
+      const user = result?.users.find((user) => user?.id === userId);
       setLoggedInUser(user);
       navigate("/heirarchy");
     } else {
-      setLoginError("User not found");
+      setLoginError("User not Found");
     }
   };
 
@@ -34,6 +34,7 @@ export const Login = () => {
         <div className="input-container">
           <span>email address:</span>
           <input
+            data-testid="email"
             className="login-input"
             aria-label="email address"
             value={email}
@@ -43,6 +44,7 @@ export const Login = () => {
         <div className="input-container">
           <span>password:</span>
           <input
+            data-testid="password"
             aria-label="password"
             className="login-input"
             type="password"
@@ -52,6 +54,7 @@ export const Login = () => {
         </div>
         <div className="login-btn-container">
           <button
+            data-testid="login-button"
             aria-label="Login"
             className="login-btn"
             onClick={handleLogin}
@@ -61,8 +64,8 @@ export const Login = () => {
         </div>
       </div>
       {loginError && (
-        <div className="error-text">
-          <span>User Not found</span>
+        <div data-testid="login-error" className="error-text">
+          <span>{loginError}</span>
         </div>
       )}
     </>

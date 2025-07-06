@@ -1,8 +1,6 @@
-# User Heirarchy
+# User Tree Heirarchy
 
-This application displays User Heirarchy using the data consumed from [API](https://gongfetest.firebaseio.com/.json).
-
-The application is bootstrapped using Vite and built using React and is unit-tested with Jest and React Testing library.
+A React application displays User Heirarchy by fetching the user data from an [API](https://gongfetest.firebaseio.com/.json), constructs a heirarchical tree based on Manager-Subordinate relationships and diplays it with navigation support using React Router. Unit Tests are provided using Jest and React Testing library.
 
 # 💻 Developer Environment Setup Guide
 
@@ -46,5 +44,11 @@ run the below command to run unit tests for react application
 
 ### ✅ Features:
 
-- User is authenticated
+- Fetches user data from an API and builds heirarchical tree based on `managerId`
+- User authentication
+- Protected Routing to display User Tree Heirarchy to only logged in users
+- User Tree is displayed in Heirarchy page after user is logged in
 - User can logout by clicking logout link on Heirarchy page
+- Login page displays "User Not Found" if user doesn't exist
+- Not Found page is displayed when random routes are used
+- Components are unit tested

@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`<App/> renders the App component 1`] = `
+<DocumentFragment>
+  <h1>
+    Please Login
+  </h1>
+  <div
+    class="login-box"
+  >
+    <div
+      class="input-container"
+    >
+      <span>
+        email address:
+      </span>
+      <input
+        aria-label="email address"
+        class="login-input"
+        data-testid="email"
+        value=""
+      />
+    </div>
+    <div
+      class="input-container"
+    >
+      <span>
+        password:
+      </span>
+      <input
+        aria-label="password"
+        class="login-input"
+        data-testid="password"
+        type="password"
+        value=""
+      />
+    </div>
+    <div
+      class="login-btn-container"
+    >
+      <button
+        aria-label="Login"
+        class="login-btn"
+        data-testid="login-button"
+      >
+        Login
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
