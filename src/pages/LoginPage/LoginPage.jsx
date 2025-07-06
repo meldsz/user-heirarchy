@@ -29,7 +29,9 @@ export const Login = () => {
 
   return (
     <>
-      <h1>Please Login</h1>
+      <div className="login-header">
+        <h1>Please Login</h1>
+      </div>
       <div className="login-box">
         <div className="input-container">
           <span>email address:</span>

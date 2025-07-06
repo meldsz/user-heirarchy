@@ -2,6 +2,16 @@
 
 A React application displays User Heirarchy by fetching the user data from an [API](https://gongfetest.firebaseio.com/.json), constructs a heirarchical tree based on Manager-Subordinate relationships and diplays it with navigation support using React Router. Unit Tests are provided using Jest and React Testing library.
 
+# Touch
+
+![alt text](image-1.png)
+![alt text](image-4.png)
+
+# Desktop
+
+![alt text](image-2.png)
+![alt text](image-3.png)
+
 # 💻 Developer Environment Setup Guide
 
 ## 📔 Pre-Requirements:

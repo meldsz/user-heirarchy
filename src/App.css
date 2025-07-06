@@ -57,11 +57,12 @@
 
 .user-details {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 5px;
-  align-items: center;
+  align-items: left;
   justify-content: center;
 }
+
 .user-children {
   padding-left: 40px;
   margin-left: 12px;
@@ -98,7 +99,32 @@
   .login-box {
     padding: 25px;
     justify-content: center;
-    width: 500px;
+    width: 425px;
     margin: auto;
+  }
+  .user-details {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+  }
+  .tree-container {
+    padding-left: 40px;
+  }
+  .login-header {
+    padding-left: calc(50% - 340px);
+    padding-bottom: 50px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #root {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .login-input {
+    width: 150px;
   }
 }

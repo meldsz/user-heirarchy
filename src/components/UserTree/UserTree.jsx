@@ -30,7 +30,7 @@ export const UserTree = () => {
   };
 
   return (
-    <div>
+    <div className="tree-container">
       {tree && tree.map((user) => <UserNode key={user.id} user={user} />)}
     </div>
   );
