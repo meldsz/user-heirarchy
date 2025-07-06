@@ -1,0 +1,96 @@
+#root {
+  padding: 15px;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  border: 2px;
+}
+
+.login-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border: 2px solid purple;
+  padding: 25px;
+  justify-content: center;
+}
+.login-input {
+  border: 2px solid purple;
+  width: 300px;
+}
+.login-btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.login-btn {
+  background-color: #6c20aa;
+  padding: 2px 25px;
+}
+.error-text {
+  display: flex;
+  justify-content: flex-end;
+  color: red;
+  width: 500px;
+  margin: auto;
+  padding: 10px;
+}
+.user-profile {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px;
+  display: flex;
+  gap: 5px;
+}
+.user-badge {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 2px solid purple;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+.user-children {
+  padding-left: 40px;
+  margin-left: 12px;
+}
+
+.user-container {
+  display: flex;
+  gap: 15px;
+  padding: 10px;
+}
+
+.toggle {
+  font-weight: 900;
+  font-size: xx-large;
+  padding-right: 10px;
+  width: 15px;
+  height: 10px;
+  background: none;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border: none;
+  outline: none;
+}
+@media only screen and (min-width: 600px) {
+  .login-box {
+    padding: 25px;
+    justify-content: center;
+    width: 500px;
+    margin: auto;
+  }
+}
