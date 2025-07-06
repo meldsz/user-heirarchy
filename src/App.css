@@ -86,6 +86,14 @@
   border: none;
   outline: none;
 }
+
+.not-found-container {
+  width: 50%;
+  margin: auto;
+  line-height: 44px;
+  text-align: center;
+}
+
 @media only screen and (min-width: 600px) {
   .login-box {
     padding: 25px;

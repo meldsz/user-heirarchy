@@ -8,9 +8,14 @@ export const NotFound = () => {
   };
 
   return (
-    <div data-testid="not-found-container">
-      <h1> Oops! The page you're looking for doesn't exist.</h1>
-      <button data-testid="home-btn" onClick={handleClick}>
+    <div data-testid="not-found-container" className="not-found-container">
+      <h1> Oops!</h1>
+      <h2>The page you're looking for doesn't exist.</h2>
+      <button
+        data-testid="home-btn"
+        onClick={handleClick}
+        className="login-btn"
+      >
         Back to Home
       </button>
     </div>
