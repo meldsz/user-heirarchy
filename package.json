@@ -13,8 +13,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router": "7.6.3",
-    "react-test-renderer": "19.1.0"
+    "react-router": "7.6.3"
   },
   "devDependencies": {
     "@babel/preset-env": "7.28.0",

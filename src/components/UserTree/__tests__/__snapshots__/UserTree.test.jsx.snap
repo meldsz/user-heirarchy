@@ -2,7 +2,9 @@
 
 exports[`<UserTree/> should display user tree correctly 1`] = `
 <DocumentFragment>
-  <div>
+  <div
+    class="tree-container"
+  >
     <div
       data-testid="user-node-container"
     >

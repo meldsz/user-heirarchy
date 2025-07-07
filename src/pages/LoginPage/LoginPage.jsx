@@ -14,16 +14,20 @@ export const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    const encodedSecret = encode(email, password);
-    const result = await fetchUsers();
-    const userId = result?.secrets[encodedSecret];
+    if (email && password) {
+      const encodedSecret = encode(email, password);
+      const result = await fetchUsers();
+      const userId = result?.secrets[encodedSecret];
 
-    if (userId) {
-      const user = result?.users.find((user) => user?.id === userId);
-      setLoggedInUser(user);
-      navigate("/heirarchy");
+      if (userId) {
+        const user = result?.users.find((user) => user?.id === userId);
+        setLoggedInUser(user);
+        navigate("/heirarchy");
+      } else {
+        setLoginError("User not Found");
+      }
     } else {
-      setLoginError("User not Found");
+      setLoginError("Enter valid user credentials");
     }
   };
 
